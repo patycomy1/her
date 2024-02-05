@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meio que</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Aceita ser minha esposa?</h2>
+        <button onclick="sim()" class="btn-sim">SIM!</button>
+        <button onmouseover="nao(this)" class="btn-no">não filadaputa</button>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            background-color: rgb(94, 179, 240);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .btn-sim,
+        .btn-no {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-sim {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .btn-no {
+            background-color: #ff3333;
+            color: #fff;
+        }
+
+        .btn-sim:hover,
+        .btn-no:hover {
+            background-color: #333;
+        }
+    </style>
+
+    <script>
+        function sim() {
+            alert("parabens agora você eh mia esposa...");
+        }
+
+        function nao(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = randomNumber(10, 90) + 'vh';
+            btn.style.left = randomNumber(10, 90) + 'vw';
+            console.log(btn);
+            console.log("ta dodja");
+        }
+
+        function randomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+    </script>
+</body>
+
+</html>
